@@ -1,7 +1,5 @@
 <?php 
-if($_SERVER('REQUEST_METHOD')=='POST'){
-    
-}
+require_once dirname(__FILE__)."\interfacce\createClassesAndInterfaces.php";
 ?>
 <!doctype html>
 <html lang="en">
