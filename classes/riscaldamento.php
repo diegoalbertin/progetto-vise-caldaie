@@ -9,7 +9,7 @@ class Riscaldamento
         protected $materiaPrima;
         protected $costoInstallazione;
 
-        public function Riscaldamento()
+        public function __construct()
         {
         }
 

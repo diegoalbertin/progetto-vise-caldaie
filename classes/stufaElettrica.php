@@ -1,7 +1,7 @@
 <?php 
 class StufaElettrica extends Riscaldamento
 {
-    public function StufaElettrica()
+    public function __construct()
     {
         $this->costoInstallazione = 1400;
         $this->rendimento = 1;

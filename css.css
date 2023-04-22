@@ -1,0 +1,17 @@
+.container-response{
+    background-color: rgb(67, 223, 80);
+    font-weight:bold;
+
+}
+.error{
+    background-color: red;
+    font-weight:bold;
+}
+.single-response{
+    border-width: 2px;
+    border-bottom-style: solid;
+    border-color: black;
+}
+.submit{
+    margin-top: 10px;
+}

@@ -1,7 +1,7 @@
 <?php 
 class caldaiaTradizionale extends Riscaldamento
 {
-    public function caldaiaTradizionale()
+    public function __construct()
     {
         $this->costoInstallazione = 1375;
         $this->rendimento = 0.9;

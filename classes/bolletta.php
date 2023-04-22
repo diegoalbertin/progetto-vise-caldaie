@@ -7,10 +7,10 @@
         protected $spesaFissaVendita; //QVD o PVC
         protected $totale;
         protected $installazione;
-        //protected Riscaldamento $metodoRiscaldamento;
-        protected $metodoRiscaldamento;
+        protected Riscaldamento $metodoRiscaldamento;
+        //protected $metodoRiscaldamento;
 
-        public function Bolletta()
+        public function __construct()
         {
             $this->spesaTrasGestCont = 96;
             $this->oneri = 47;
@@ -27,9 +27,9 @@
             return "Spesa materia {".$this->costoMateriaPrima."}";
         }
 
-        public function Tofunction()
+        public function __toString()
         {
-            return "\nCosto bolletta {".$this->metodoRiscaldamento."}: {".sqrt($this->totale, 4) + $this->installazione."} per il primo anno, di cui {".$this->installazione."} per l'installazione, per gli anni successivi il prezzo sarebbe pari a {".sqrt($this->totale, 4)."}\n";
+            return "\nCosto bolletta ".$this->metodoRiscaldamento->ToString().": ".round($this->totale, 4) + $this->installazione."€ per il primo anno, di cui ".$this->installazione."€ per l'installazione, per gli anni successivi il prezzo sarebbe pari a ".round($this->totale, 4)."€\n";
         }
 
         public function CalcolaBolletta()
@@ -47,7 +47,7 @@
             $this->installazione = $costoInt;
         }
 
-        public function SetMetodoRiscaldamento(/*Riscaldamento $metodo*/ $metodo)
+        public function SetMetodoRiscaldamento(Riscaldamento $metodo /*$metodo*/)
         {
             $this->metodoRiscaldamento = $metodo;
         }

@@ -1,7 +1,7 @@
 <?php 
     class caldaiaCondensazione extends Riscaldamento
     {
-        public function caldaiaCondensazione()
+        public function __construct()
         {
             $this->costoInstallazione = 1375;
             $this->rendimento = 1;
