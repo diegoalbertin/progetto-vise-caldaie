@@ -47,7 +47,7 @@ function calcolaBollette($consumoKw,$consumoSMC){
 
     }
 
-    rsort($bolletteRiscaldamento);
+    sort($bolletteRiscaldamento);
     
     return $bolletteRiscaldamento;
 }
