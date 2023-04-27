@@ -18,7 +18,7 @@
                 <br>
 
                 <div class="row">
-                    <label for="">consumo corrente</label>
+                <label class="form-label">Tipologia del corso:</label>
                     <input class="col-6 offset-3" type="text" onkeypress="return isNumber(event)" placeholder="Kw" name="corrente">
                 </div>
                 
@@ -27,10 +27,8 @@
                     <input class="col-6 offset-3" type="text" onkeypress="return isNumber(event)" placeholder="SMC" name="gas">
                 </div>
 
-                </div>
-                <input class="submit rounded" type="submit" value="calcola" name="submit">
+                 <input type="submit" name="submit" class="submit btn btn-primary mb-5" value="Calcola" />
             </form>
-</div>
             <br>
             <?php 
 require_once dirname(__FILE__)."\calcolaBollette.php";
@@ -41,6 +39,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
     if($_POST['corrente']==0 && intval($_POST['gas'])==0){
         ?>
         <div class="text-center error">
+            <br>
             <?php 
                 echo "!!! non puoi inserire entrambi i consumi pari a zero !!!";
             ?> 
@@ -52,18 +51,19 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
     }
 }
 ?>
-
+<br>
   <?php
             if(isset($data)){
                 foreach($data as $bollette){
                     ?>
-                    <div class="container-response text-center">
+                    <div class="container-response">
                     <div class="row">
-                        <div class="single-response">
+                    <div class= "text-center">
                         <?php
                             echo $bollette->intToString();
+                            echo("<hr>");
                             ?>
-                               </div>
+                            </div>
                         </div>   
                     </div>
                     <?php
@@ -72,7 +72,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
         ?>
 
         </div>
-    </div>
+        </div>
     <script>
         function isNumber(evt) {
             evt = (evt) ? evt : window.event;
