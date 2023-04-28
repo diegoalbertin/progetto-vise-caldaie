@@ -1,5 +1,5 @@
 <?php 
-require_once dirname(__FILE__)."\interfacce\createClassesAndInterfaces.php";
+require_once dirname(__FILE__)."..\..\interfacce\createClassesAndInterfaces.php";
 
 
 function calcolaBollette($consumoKw,$consumoSMC){
